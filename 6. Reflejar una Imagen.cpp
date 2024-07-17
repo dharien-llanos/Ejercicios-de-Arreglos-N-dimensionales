@@ -4,36 +4,34 @@ using namespace std;
 
 int main(){
 	
-	int matriz[6][6];
-	
+	int x[6][6];
+	cout<<"ingrese los elementos de la matris: "<<endl;
 	for(int i=0; i<6; i++){
 		for(int j=0; j<6; j++){
-			cout<<"Ingrese el valor para la matriz[" << i << "][" << j << "]: ";
-			cin>>matriz[i][j];
+		
+			cin>>x[i][j];
 		}
 	}
 	
-	cout<<"Escritura de la matriz: " << endl;
+	cout<<"la matris es : " << endl;
 	
 	for(int i=0; i<6; i++){
 		for(int j=0; j<6; j++){
-			cout<<matriz[i][j]<<" ";
+			cout<<x[i][j]<<" ";
 		}
 		cout<<endl;
 	}
 	
-	cout<<endl;
-	
 	
 	for(int i=0; i<6; i++){
 		for(int j=0; j<3; j++){
-			int aux = matriz[i][j];
-			matriz[i][j] = matriz[i][5-j];
-			matriz[i][5-j] = aux;
+			int aux = x[i][j];
+			x[i][j] =x[i][5-j];
+			x[i][5-j]=aux;
 		}
 	}
 	
-	cout<<"Se imprime la nueva matriz: ";
+	cout<<"Se imprime la nueva matriz: "<<endl;
 	
 	for(int i=0; i<6; i++){
 		for(int j=0; j<6; j++){
